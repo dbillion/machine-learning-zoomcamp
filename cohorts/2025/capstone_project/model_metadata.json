@@ -1,0 +1,19 @@
+{
+  "model": "XGBoost Regressor",
+  "n_estimators": 100,
+  "max_depth": 6,
+  "train_size": 36657,
+  "test_size": 9165,
+  "rmse": 4.464437995342767,
+  "mae": 2.0309284887839323,
+  "r2": 0.9303344997735256,
+  "features": [
+    "passenger_count",
+    "trip_distance_km",
+    "pickup_hour",
+    "pickup_dayofweek",
+    "PULocationID",
+    "DOLocationID"
+  ],
+  "target": "fare_amount"
+}
