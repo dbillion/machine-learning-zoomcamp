@@ -1,0 +1,8 @@
+{
+  "Q1": 0.49,
+  "Q2": "kind v0.20.0",
+  "Q3": "kind create cluster",
+  "Q4": "Running",
+  "Q5": 80,
+  "Q6": "kubectl scale deployment --replicas=3"
+}

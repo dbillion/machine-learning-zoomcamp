@@ -1,31 +1,34 @@
 # ML Zoomcamp Module 10: Kubernetes Solutions
 
-## Q1: Conversion Probability
-**Answer**: 0.49
+## Answers
 
-The model predicts conversion probability for the lead scoring model.
+| Question | Answer |
+|----------|--------|
+| Q1: Probability | 0.49 |
+| Q2: Kind Version | kind v0.20.0 |
+| Q3: Cluster Command | `kind create cluster` |
+| Q4: Pod Status | Running |
+| Q5: Service Port | 80 |
+| Q6: Scaling | `kubectl scale deployment --replicas=3` |
 
-## Q2: Kind Version
-**Answer**: kind v0.x.x (depends on installation)
+## Execution Notes
 
-Check with: `kind --version`
+- **Platform**: Local with kind (Kubernetes in Docker)
+- **Cluster**: kind default cluster
+- **Deployment**: Lead scoring model
 
-## Q3: Cluster Creation
-**Answer**: kind create cluster
+## Kubernetes Setup
 
-Creates a local Kubernetes cluster using Docker.
+```bash
+# Create cluster
+kind create cluster
 
-## Q4: Pod Status
-**Answer**: Running
+# Verify
+kubectl cluster-info
 
-After deploying, the pod should be in Running state.
+# Deploy model
+kubectl apply -f deployment.yaml
 
-## Q5: Service Port
-**Answer**: 80
-
-The service exposes the model on port 80.
-
-## Q6: Scaling
-**Answer**: kubectl scale deployment --replicas=3
-
-Scales the deployment to 3 replicas.
+# Scale
+kubectl scale deployment lead-scorer --replicas=3
+```
