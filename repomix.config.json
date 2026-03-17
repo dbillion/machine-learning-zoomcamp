@@ -1,0 +1,31 @@
+{
+  "$schema": "https://repomix.com/schemas/latest/schema.json",
+  "output": {
+    "filePath": "repomix-output.xml",
+    "style": "xml",
+    "tokenCountTree": true,
+    "splitOutput": false,
+    "git": {
+      "sortByChanges": true,
+      "includeLogs": false
+    }
+  },
+  "include": [
+    "**/*.py",
+    "**/*.ipynb",
+    "**/*.md",
+    "**/Dockerfile*",
+    "**/docker-compose*.yml"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "**/*.env",
+      "**/data/**",
+      "**/*.pkl",
+      "**/models/**",
+      "**/repomix-output.*"
+    ]
+  }
+}
